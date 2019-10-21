@@ -123,7 +123,7 @@ update_mirrors() {
             ;;
         esac
     done
-    echo "code=${code}" >> "${vars}"
+    echo "code=${code}" >> /tmp/vars.conf
 
 }
 

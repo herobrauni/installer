@@ -41,6 +41,7 @@ install_options() {
                  *)                      quick_install
                  ;;
          esac
+    echo "install_opt=${install_opt}" >> /tmp/vars.conf
 
 }
 

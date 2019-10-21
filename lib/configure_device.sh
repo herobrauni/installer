@@ -162,6 +162,13 @@ prepare_drives() {
         esac
     done
 
+    echo "DRIVE=${DRIVE}" >> /tmp/vars.conf
+    echo "SWAP=${SWAP}" >> /tmp/vars.conf
+    echo "SWAPSPACE=${SWAPSPACE}" >> /tmp/vars.conf
+    echo "GPT=${GPT}" >> /tmp/vars.conf
+    echo "UEFI=${UEFI}" >> /tmp/vars.conf
+
+
 }
 
 auto_part() {
@@ -858,6 +865,7 @@ fs_select() {
         enable_xfs=true
     fi
 
+    echo "FS=${FS}" >> /tmp/vars.conf
 }
 
 select_util() {

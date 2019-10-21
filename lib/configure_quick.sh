@@ -193,4 +193,8 @@ quick_desktop() {
     DM="lightdm"
     enable_dm=true
 
+    echo "de=${de}" >> /tmp/vars.conf
+    echo "DE=${DE}" >> /tmp/vars.conf
+    
+
 }

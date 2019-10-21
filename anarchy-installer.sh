@@ -76,6 +76,8 @@ main() {
     configure_system
     add_user
     reboot_system
+    declare >> /tmp/declare.conf
+
 }
 
 dialog() {
