@@ -396,7 +396,7 @@ copy_config_files() { # prev: build_conf
     echo -e "Adding anarchy config and installer scripts to iso ..." | log
     sudo cp "${working_dir}"/etc/anarchy.conf "${working_dir}"/etc/pacman.conf "${squashfs}"/etc/
     sudo cp "${working_dir}"/anarchy-installer.sh "${squashfs}"/usr/bin/anarchy
-    sudo cp "${working_dir}"/variables.conf "${squashfs}"/tmp/variables.conf
+    sudo cp "${working_dir}"/variables.conf "${squashfs}"/etc/variables.conf
     sudo cp "${working_dir}"/extra/sysinfo "${working_dir}"/extra/iptest "${squashfs}"/usr/bin/
     sudo chmod +x "${squashfs}"/usr/bin/anarchy "${squashfs}"/usr/bin/sysinfo "${squashfs}"/usr/bin/iptest
 
