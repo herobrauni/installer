@@ -39,6 +39,7 @@ init() {
         anarchy_directory="/usr/share/anarchy" # prev: aa_dir
         anarchy_config="/etc/anarchy.conf" # prev: aa_conf
         anarchy_scripts="/usr/lib/anarchy" # prev: aa_lib
+        vars="${anarchy_directory}"/tmp/variables.conf
     else
         anarchy_directory=$(dirname "$(readlink -f "$0")") # Anarchy git repository
         anarchy_config="${anarchy_directory}"/etc/anarchy.conf
