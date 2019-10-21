@@ -43,6 +43,7 @@ init() {
         anarchy_directory=$(dirname "$(readlink -f "$0")") # Anarchy git repository
         anarchy_config="${anarchy_directory}"/etc/anarchy.conf
         anarchy_scripts="${anarchy_directory}"/lib
+        vars="${anarchy_directory}"/variables.conf
     fi
 
     trap '' 2
@@ -55,7 +56,9 @@ init() {
 
     # shellcheck source=/etc/anarchy.conf
     source "${anarchy_config}"
+    source "${vars}"
     language
+    echo "ILANG=${ILANG}" >> "${vars}"
     # shellcheck source=/usr/share/anarchy/lang
     source "${lang_file}" # /lib/language.sh:43-60
     export reload=true

@@ -48,6 +48,7 @@ set_keys() {
 
     localectl set-keymap "$keyboard"
     echo "$(date -u "+%F %H:%M") : Set keymap to: $keyboard" >> "$log"
+    echo "keyboard=${$keyboard}" >> "${vars}"
 
 }
 
@@ -86,7 +87,7 @@ set_locale() {
             break
         fi
     done
-
+    echo "LOCALE=${LOCALE}" >> "${vars}"
     echo "$(date -u "+%F %H:%M") : Set locale to: $LOCALE" >> "$log"
 
 }

@@ -123,6 +123,7 @@ update_mirrors() {
             ;;
         esac
     done
+    echo "code=${code}" >> "${vars}"
 
 }
 
