@@ -7,3 +7,4 @@ anarchy-*-x86_64.iso
 anarchy-*-x86_64.iso.*
 sha1sums.txt
 log/iso-generator-211019.log
+.vscode/settings.json
