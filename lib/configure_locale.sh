@@ -48,7 +48,7 @@ set_keys() {
 
     localectl set-keymap "$keyboard"
     echo "$(date -u "+%F %H:%M") : Set keymap to: $keyboard" >> "$log"
-    echo "keyboard=${keyboard}" >> "${vars}"
+    echo "keyboard=${keyboard}" >> /tmp/vars.conf
 
 }
 
@@ -87,7 +87,7 @@ set_locale() {
             break
         fi
     done
-    echo "LOCALE=${LOCALE}" >> "${vars}"
+    echo "LOCALE=${LOCALE}" >> /tmp/vars.conf
     echo "$(date -u "+%F %H:%M") : Set locale to: $LOCALE" >> "$log"
 
 }
@@ -121,6 +121,7 @@ set_zone() {
     done
 
     echo "$(date -u "+%F %H:%M") : Set timezone to: $ZONE" >> "$log"
+    echo "ZONE=${ZONE}" >> /tmp/vars.conf
 
 }
 

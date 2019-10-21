@@ -59,7 +59,7 @@ language() {
         "Spanish") export lang_file="${anarchy_directory}"/lang/anarchy-spanish.conf lib=es bro=es-es ;;
         "Swedish") export lang_file="${anarchy_directory}"/lang/anarchy-swedish.conf lib=sv bro=sv-se ;;
     esac
-
+    echo "ILANG=${ILANG}" >> /tmp/vars.conf
 }
 
 # vim: ai:ts=4:sw=4:et
